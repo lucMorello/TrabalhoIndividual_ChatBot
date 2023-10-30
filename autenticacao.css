@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background: #023B4C;
+    background-image: url('fundo_aute.jpg');
+    background-size: 80%; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center; 
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #b29d82, #c39358);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Caveat', cursive;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Caveat', cursive;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #d6ac80; /* Nova cor do botão */
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+button::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(179, 144, 100,1) 50%, rgba(179, 144, 100,1) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+button:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+}
+
+button:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+}

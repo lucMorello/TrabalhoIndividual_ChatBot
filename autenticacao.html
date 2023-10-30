@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RemiGPT</title>
+    <script src="https://accounts.google.com/gsi/client" asyncdefer></script>
+    <script>
+        function handleCredentialResponse(response) {}
+
+        window.onload = function () {
+
+          google.accounts.id.initialize({
+            client_id: "445702077185-pre6qkgjeqihpk1flugfqo8cror85j27.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+          });
+
+          google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            { theme: "outline", size: "large" } 
+          );
+          google.accounts.id.prompt(); 
+        }
+      </script>
+    <link rel="stylesheet" href="autenticacao.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login - RemiGPT</h2>
+        <p>Desbloqueie sua criatividade na cozinha, economize e evite desperdício! Aproveite ao máximo seus alimentos e descubra receitas incríveis com a ajuda da nossa inovadora API GPT. Transforme a forma como você cozinha e se alimenta.</p>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">
+                <div id="buttonDiv"></div>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
